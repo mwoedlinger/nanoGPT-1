@@ -7,6 +7,8 @@ import numpy as np
 import tiktoken
 from datasets import load_dataset # huggingface datasets
 
+os.environ["HF_DATASETS_CACHE"] = "/data/mwoedlinger/.cache/huggingface/datasets"
+
 # number of workers in .map() call
 # good number to use is ~order number of cpu cores // 2
 num_proc = 8
